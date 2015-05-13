@@ -4,8 +4,6 @@
 # This file is auto-generated. DO NOT EDIT!
 #
 require 'protobuf/message'
-require 'protobuf/rpc/service'
-
 
 ##
 # Imports
@@ -529,15 +527,4 @@ module GoogleUnittest
   class TestCommentInjectionMessage
     optional :string, :a, 1, :default => "*/ <- Neither should this."
   end
-
-
-  ##
-  # Service Classes
-  #
-  class TestService < ::Protobuf::Rpc::Service
-    rpc :foo, ::GoogleUnittest::FooRequest, ::GoogleUnittest::FooResponse
-    rpc :bar, ::GoogleUnittest::BarRequest, ::GoogleUnittest::BarResponse
-  end
-
 end
-
