@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'support/packed_field'
 
 RSpec.describe Protobuf::Field::Int32Field do
 
