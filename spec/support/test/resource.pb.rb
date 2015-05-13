@@ -4,7 +4,6 @@
 # This file is auto-generated. DO NOT EDIT!
 #
 require 'protobuf/message'
-require 'protobuf/rpc/service'
 
 module Test
 
@@ -103,17 +102,5 @@ module Test
     optional :string, :foo, 100, :extension => true
     optional :int64, :bar, 101, :extension => true
   end
-
-
-  ##
-  # Service Classes
-  #
-  class ResourceService < ::Protobuf::Rpc::Service
-    rpc :find, ::Test::ResourceFindRequest, ::Test::Resource
-    rpc :find_with_rpc_failed, ::Test::ResourceFindRequest, ::Test::Resource
-    rpc :find_with_sleep, ::Test::ResourceSleepRequest, ::Test::Resource
-    rpc :find_not_implemented, ::Test::ResourceFindRequest, ::Test::Resource
-  end
-
 end
 

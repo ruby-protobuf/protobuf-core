@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'spec/support/test/resource_service'
+require 'support/test/resource.pb'
 
 RSpec.describe 'works through class inheritance' do
   module Corp
