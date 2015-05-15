@@ -5,4 +5,4 @@ before_install:
  - sudo apt-get install -y protobuf-compiler
 cache: bundler
 rvm:
-  - 2.2.1
+  - 2.2
