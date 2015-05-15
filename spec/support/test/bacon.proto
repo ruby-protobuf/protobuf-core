@@ -1,0 +1,7 @@
+message Bacon {
+  optional uint32 deliciousness = 1;
+}
+
+service BaconService {
+  rpc Moar (Bacon) returns (Bacon);
+}
