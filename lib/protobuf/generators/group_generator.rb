@@ -2,7 +2,6 @@ require 'protobuf/generators/enum_generator'
 require 'protobuf/generators/extension_generator'
 require 'protobuf/generators/field_generator'
 require 'protobuf/generators/message_generator'
-require 'protobuf/generators/service_generator'
 
 module Protobuf
   module Generators
@@ -68,12 +67,6 @@ module Protobuf
       def add_messages(descriptors, options = {})
         descriptors.each do |descriptor|
           @groups[:message] << MessageGenerator.new(descriptor, indent_level, options)
-        end
-      end
-
-      def add_services(service_descriptors)
-        service_descriptors.each do |service_descriptor|
-          @groups[:service] << ServiceGenerator.new(service_descriptor, indent_level)
         end
       end
 

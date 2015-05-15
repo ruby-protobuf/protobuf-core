@@ -34,13 +34,11 @@ module Protobuf
             group.add_message_declarations(descriptor.message_type)
             group.add_messages(descriptor.message_type, :extension_fields => @extension_fields, :namespace => [descriptor.package])
             group.add_extended_messages(unknown_extensions)
-            group.add_services(descriptor.service)
 
             group.add_header(:enum, 'Enum Classes')
             group.add_header(:message_declaration, 'Message Classes')
             group.add_header(:message, 'Message Fields')
             group.add_header(:extended_message, 'Extended Message Fields')
-            group.add_header(:service, 'Service Classes')
             print group.to_s
           end
 
@@ -97,7 +95,6 @@ module Protobuf
 
       def print_generic_requires
         print_require("protobuf/message")
-        print_require("protobuf/rpc/service") if descriptor.service.count > 0
         puts
       end
 
