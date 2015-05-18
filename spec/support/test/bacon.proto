@@ -1,0 +1,14 @@
+enum Texture {
+  FATTY = 0;
+  CRUNCHY = 1;
+  CEMENT = 2;
+}
+
+message Bacon {
+  optional uint32 deliciousness = 1;
+  optional Texture texture = 2 [default = CEMENT];
+}
+
+service BaconService {
+  rpc Moar (Bacon) returns (Bacon);
+}
